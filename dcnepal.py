@@ -40,5 +40,6 @@ for each_article_url in articles_url:
 print(articles_data)
 
 filename="dcnepal.txt"
-with open(filename, "w") as f:
-    json.dump(articles_data, f, indent=4)
+with open(filename, "a") as f:
+    for item in articles_data:
+     f.write(json.dumps(item) + "\n")
